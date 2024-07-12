@@ -7,6 +7,8 @@ import { errorRoute } from './layouts/error/error.route';
 import HomeComponent from './home/home.component';
 import NavbarComponent from './layouts/navbar/navbar.component';
 import LoginComponent from './login/login.component';
+import {RoomComponent}from './room/room.component';
+
 
 const routes: Routes = [
   {
@@ -14,6 +16,7 @@ const routes: Routes = [
     component: HomeComponent,
     title: 'home.title',
   },
+
   {
     path: '',
     component: NavbarComponent,
@@ -36,6 +39,13 @@ const routes: Routes = [
     component: LoginComponent,
     title: 'login.title',
   },
+
+  {
+    path: 'room',
+    component: RoomComponent,
+    title: 'room.title',
+  },
+
   {
     path: '',
     loadChildren: () => import(`./entities/entity.routes`),
