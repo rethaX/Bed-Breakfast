@@ -81,45 +81,11 @@
               </a>
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/admin/metrics" routerLinkActive="active" (click)="collapseNavbar()">
-                <fa-icon icon="tachometer-alt" [fixedWidth]="true"></fa-icon>
-                <span>Metrics</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" routerLink="/admin/health" routerLinkActive="active" (click)="collapseNavbar()">
-                <fa-icon icon="heart" [fixedWidth]="true"></fa-icon>
-                <span>Health</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" routerLink="/admin/configuration" routerLinkActive="active" (click)="collapseNavbar()">
-                <fa-icon icon="cogs" [fixedWidth]="true"></fa-icon>
-                <span>Configuration</span>
-              </a>
-            </li>
-            <li>
               <a class="dropdown-item" routerLink="/admin/logs" routerLinkActive="active" (click)="collapseNavbar()">
                 <fa-icon icon="tasks" [fixedWidth]="true"></fa-icon>
-                <span>Logs</span>
+                <span>AddRoom</span>
               </a>
             </li>
-            @if (openAPIEnabled) {
-              <li>
-                <a class="dropdown-item" routerLink="/admin/docs" routerLinkActive="active" (click)="collapseNavbar()">
-                  <fa-icon icon="book" [fixedWidth]="true"></fa-icon>
-                  <span>API</span>
-                </a>
-              </li>
-            }
-            @if (!inProduction) {
-              <li>
-                <a class="dropdown-item" href=" http://localhost:8092/ " target="_tab" (click)="collapseNavbar()">
-                  <fa-icon icon="database" [fixedWidth]="true"></fa-icon>
-                  <span>Database</span>
-                </a>
-              </li>
-            }
           </ul>
         </li>
         <li
