@@ -1,1 +1,31 @@
-<p>room works!</p>
+<section>
+  <button (click)="Add()" style="float: right">Add New Room</button>
+  <!--  <form>-->
+  <!--    <input type="text" placeholder="Filter by city" #filter>-->
+  <!--    <button class="primary" type="submit" (click)="filterResults(filter.value)" >Search</button>-->
+  <!--  </form>-->
+</section>
+<!--<section class="results">-->
+<!--&lt;!&ndash;  <app-room-location&ndash;&gt;-->
+<!--&lt;!&ndash;    *ngFor="let roomlocation of Rooms"&ndash;&gt;-->
+<!--&lt;!&ndash;    [roomlocation]="roomlocation">&ndash;&gt;-->
+<!--&lt;!&ndash;  </app-room-location>&ndash;&gt;-->
+<!--</section>-->
+<section>
+  <ul>
+    <!--    *ngFor="let room of Rooms"-->
+    <!--      {{room.id}}-->
+    @for (rooms of Rooms; track $index) {
+      <img class="listing-photo" [src]="rooms.photo" alt="Exterior  {{ rooms.photo }}" />
+
+      <p class="listing-location"><span class="sandile">Room Location: </span>{{ rooms.roomLocation }}</p>
+      <p class="listing-location"><span class="sandile">Room Price: </span>{{ rooms.roomPrice }}</p>
+      <p class="listing-location"><span class="sandile">Room Status: </span>{{ rooms.roomStatus }}</p>
+      <p class="listing-location"><span class="sandile">Room Type: </span>{{ rooms.roomType }}</p>
+      <!-- <button class="w3-button w3-black" >Update Room</button> -->
+
+      <!-- <button class="w3-button w3-black" (click)="deleteR(roomlocation)"  >Delete Room</button> -->
+      <a>More About Room</a>
+    }
+  </ul>
+</section>
