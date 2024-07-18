@@ -1,0 +1,39 @@
+<section class="listing-apply">
+  <h2 class="section-heading">Add Room</h2>
+  <form [formGroup]="applyForm" (ngSubmit)="submitApplication()">
+    <label for="roomLocation">Room Location</label>
+    <input id="roomLocation" type="text" formControlName="roomLocation" />
+
+    <label for="roomType">Room Type</label>
+    <input id="roomType" type="text" formControlName="roomType" />
+
+    <label for="roomStatus">Room Status</label>
+    <input id="roomStatus" type="roomStatus" formControlName="roomStatus" />
+    <label for="roomPrice">Room Price</label>
+    <input id="roomPrice" type="number" formControlName="roomPrice" />
+    <label for="photo">Room Photo URL</label>
+    <input id="photo" type="url" formControlName="photo" />
+
+    <button type="submit" class="primary">Submit</button>
+  </form>
+</section>
+
+<!--<section class="listing-apply">-->
+<!--  <h2 class="section-heading">Add Room</h2>-->
+<!--  <form >-->
+<!--    <label for="roomLocation">Room Location</label>-->
+<!--    <input id="roomLocation" type="text" >-->
+
+<!--    <label for="roomType">Room Type</label>-->
+<!--    <input id="roomType" type="text">-->
+
+<!--    <label for="roomStatus">Room Status</label>-->
+<!--    <input id="roomStatus" type="roomStatus" >-->
+<!--    <label for="roomPrice">Room Price</label>-->
+<!--    <input id="roomPrice" type="number" >-->
+<!--    <label for="photo">Room Photo URL</label>-->
+<!--    <input id="photo" type="url" >-->
+
+<!--    <button type="submit" class="primary">Submit</button>-->
+<!--  </form>-->
+<!--</section>-->

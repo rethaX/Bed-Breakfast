@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
       <span class="logo-img"></span>
-      <span class="navbar-title">SnSBnB</span>
+      <span class="navbar-title">SnS BnB</span>
     </a>
     <a
       class="navbar-toggler d-lg-none"
@@ -35,12 +35,6 @@
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-            <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu" data-cy="entity">
-              <span>
-                <fa-icon icon="th-list"></fa-icon>
-                <span>Entities</span>
-              </span>
-            </a>
             <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
               <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
             </ul>
@@ -81,7 +75,7 @@
               </a>
             </li>
             <li>
-              <a class="dropdown-item" routerLink="/admin/logs" routerLinkActive="active" (click)="collapseNavbar()">
+              <a class="dropdown-item" routerLink="/add" routerLinkActive="active" (click)="collapseNavbar()">
                 <fa-icon icon="tasks" [fixedWidth]="true"></fa-icon>
                 <span>AddRoom</span>
               </a>

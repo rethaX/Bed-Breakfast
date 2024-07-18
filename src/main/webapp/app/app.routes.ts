@@ -7,8 +7,9 @@ import { errorRoute } from './layouts/error/error.route';
 import HomeComponent from './home/home.component';
 import NavbarComponent from './layouts/navbar/navbar.component';
 import LoginComponent from './login/login.component';
-import {RoomComponent}from './room/room.component';
-
+import { RoomComponent } from './room/room.component';
+import { AddRoomComponent } from './add-room/add-room.component';
+import { BookingComponent } from './booking/booking.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,16 @@ const routes: Routes = [
     path: 'room',
     component: RoomComponent,
     title: 'room.title',
+  },
+  {
+    path: 'add',
+    component: AddRoomComponent,
+    title: 'addRoom.title',
+  },
+  {
+    path: 'booking',
+    component: BookingComponent,
+    title: 'bookings.title',
   },
 
   {

@@ -21,6 +21,9 @@ export class RoomComponent {
     private router: Router,
     private roomService: RoomService,
   ) {}
+  booking() {
+    this.router.navigate(['booking']);
+  }
 
   ngOnInit(): void {
     this.roomService.getRooms().subscribe(

@@ -10,4 +10,9 @@ export class RoomService {
   getRooms() {
     return this.http.get<any[]>(`${this.Base_url}`);
   }
+
+  /** POST: add a new room to the server */
+  addRooms(userRoom: any) {
+    return this.http.post<any>(`${this.Base_url}`, userRoom);
+  }
 }
