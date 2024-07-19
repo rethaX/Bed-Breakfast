@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { Router } from '@angular/router';
 import { Booking } from '../booking';
 import { RoomService } from '../room.service';
 import { BookingService } from '../booking.service';
@@ -24,6 +24,7 @@ export class BookingComponent {
   constructor(
     private bookingService: BookingService,
     private fb: FormBuilder,
+    private router: Router,
   ) {
     this.addForm = this.fb.group({
       startDate: [null, Validators.required],
@@ -36,14 +37,15 @@ export class BookingComponent {
       const booking: Booking = {
         ...this.addForm.value,
         user: { id: 5 },
-        room: { id: 203 },
+        room: { id: 253 },
         bookingStatus: 'Pending',
       };
 
       this.bookingService.addBooking(booking).subscribe(res => {
+        console.log('SuccessFul');
         this.addForm.reset();
-        console.log(res);
-        console.log('SucessFul');
+        alert('Booked successful');
+        this.router.navigate(['/room']);
       });
     }
   }

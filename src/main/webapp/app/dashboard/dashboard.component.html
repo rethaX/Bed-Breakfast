@@ -1,0 +1,26 @@
+<br />
+<table class="table px-5 table-hover">
+  <thead>
+    <tr>
+      <th scope="col">UserId</th>
+      <th scope="col">Username</th>
+      <th scope="col">Room Number</th>
+      <th scope="col">Room Status</th>
+      <th scope="col">Room Price</th>
+      <th scope="col">Book Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of allBookings; track $index) {
+      <tr>
+        <th scope="row">{{ item.user.id }}</th>
+        <td>{{ item.user.username }}</td>
+        <td>{{ item.room.id }}</td>
+        <td>{{ item.room.roomStatus }}</td>
+        <td>{{ item.room.roomPrice }}</td>
+        <td>{{ item.bookingStatus }}</td>
+        <button (click)="cancel()">cancel</button>
+      </tr>
+    }
+  </tbody>
+</table>

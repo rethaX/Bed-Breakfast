@@ -10,6 +10,7 @@ import LoginComponent from './login/login.component';
 import { RoomComponent } from './room/room.component';
 import { AddRoomComponent } from './add-room/add-room.component';
 import { BookingComponent } from './booking/booking.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -56,7 +57,11 @@ const routes: Routes = [
     component: BookingComponent,
     title: 'bookings.title',
   },
-
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    title: 'bookings.title',
+  },
   {
     path: '',
     loadChildren: () => import(`./entities/entity.routes`),

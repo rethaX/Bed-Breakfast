@@ -1,11 +1,8 @@
 export interface Booking {
-  user: {
-    id: number;
-  };
-  room: {
-    id: number;
-  };
+  bookingId: number;
+  user: number;
+  room: number;
   bookingStatus: string;
-  endDate: Date;
   startDate: Date;
+  endDate: Date;
 }
